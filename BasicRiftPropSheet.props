@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <OculusCurrent>C:\source\OculusSDKCurrent</OculusCurrent>
+    <OculusIncludes>$(OculusCurrent)\LibOVR\Include;$(OculusCurrent)\LibOVR\Src;$(OculusCurrent)\LibOVRKernel\Src;</OculusIncludes>
+    <OculusLibsWin32Debug>$(OculusCurrent)\LibOVR\Lib\Windows\Win32\Debug\VS2013;$(OculusCurrent)\LibOVRKernel\Lib\Windows\Win32\Debug\VS2013;</OculusLibsWin32Debug>
+    <TOOLS>c:\tools</TOOLS>
+    <GLM>$(TOOLS)\glm</GLM>
+    <SDL2>$(TOOLS)\SDL2-2.0.3</SDL2>
+    <GLEW>$(TOOLS)\glew-1.12.0</GLEW>
+    <GLUT>$(TOOLS)\freeglut-3.0.0</GLUT>
+    <GLFW>$(TOOLS)\glfw-3.1.1</GLFW>
+    <OpenCV3>$(TOOLS)\opencv\build</OpenCV3>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(GLFW)\include;$(OpenCV3)\include;$(GLEW)\include;$(GLUT)\include;$(SDL2)\include;$(GLM);$(OculusIncludes);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>LibOVR.lib;LibOVRKernel.lib;opengl32.lib;SDL2.lib;SDL2Main.lib;glew32d.lib;freeglutd.lib;opencv_ts300d.lib;opencv_world300d.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>C:\tools\opencv\build\x86\vc12\lib;$(GLFW)\build\src\Debug;$(OpenCV3)\x86\vc12\lib;$(GLUT)\build\lib\Debug;$(GLEW)\lib\Debug\Win32;$(SDL2)\lib\x86;$(OculusLibsWin32Debug);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="OculusIncludes">
+      <Value>$(OculusIncludes)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="OculusLibsWin32Debug">
+      <Value>$(OculusLibsWin32Debug)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="Win32_GLAppUtil">
+      <Value>$(Win32_GLAppUtil)</Value>
+    </BuildMacro>
+    <BuildMacro Include="GLM">
+      <Value>$(GLM)</Value>
+    </BuildMacro>
+    <BuildMacro Include="SDL2">
+      <Value>$(SDL2)</Value>
+    </BuildMacro>
+    <BuildMacro Include="GLEW">
+      <Value>$(GLEW)</Value>
+    </BuildMacro>
+    <BuildMacro Include="GLUT">
+      <Value>$(GLUT)</Value>
+    </BuildMacro>
+    <BuildMacro Include="OpenCV3">
+      <Value>$(OpenCV3)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TOOLS">
+      <Value>$(TOOLS)</Value>
+    </BuildMacro>
+    <BuildMacro Include="OculusCurrent">
+      <Value>$(OculusCurrent)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
