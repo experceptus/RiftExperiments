@@ -17,5 +17,6 @@ The current requirements are:
         Build 3 multi-colored cubes each rotating on one axis
 
 #####4. 04-Texture Cubes
+        Same code as in 03 but with textures added. Several TV Test Patterns to try out. 
 
 #####5. 05-Importing Models
