@@ -19,6 +19,14 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="textures\box.jpg" />
+    <Image Include="textures\cube_texture.png" />
+    <Image Include="textures\len_std.jpg" />
+    <Image Include="textures\PM5544_with_non-PAL_signals.png" />
+    <Image Include="textures\RCA_Indian_Head_test_pattern.JPG" />
+    <Image Include="textures\Smiley.jpg" />
+    <Image Include="textures\testpat.png" />
+    <Image Include="textures\tv-test-pattern-bbc.jpg" />
+    <Image Include="textures\uvtemplate.bmp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6621A9E9-3693-4BE9-B955-2F3CE0E4D137}</ProjectGuid>
