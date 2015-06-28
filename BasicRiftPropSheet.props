@@ -36,9 +36,6 @@
       <Value>$(OculusLibsWin32Debug)</Value>
       <EnvironmentVariable>true</EnvironmentVariable>
     </BuildMacro>
-    <BuildMacro Include="Win32_GLAppUtil">
-      <Value>$(Win32_GLAppUtil)</Value>
-    </BuildMacro>
     <BuildMacro Include="GLM">
       <Value>$(GLM)</Value>
     </BuildMacro>
